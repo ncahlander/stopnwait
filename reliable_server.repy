@@ -7,10 +7,12 @@ To run [locally]
 [python2 <repy_path>/repy.py restrictions.text] reliable_server <out_file> <port>
 """
 
-include reliable.repy
-
 def message_received(remoteip, remoteport, message, commhandle):
     # Handle the received message and print it to the file
+
+    #file = ?
+    #handle
+    file.write(message) #idon'tknwohwthatimdoing
     pass
 
 def startServer(portnum):

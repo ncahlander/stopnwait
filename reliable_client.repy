@@ -7,12 +7,12 @@ To run [locally]
 [python2 <repy_path>/repy.py restrictions.text] reliable_client <in_file> <dest host> <port> <max dgram size> <retries> <timeout ms>
 """
 
-include reliable.repy
-
  #Send inputfile to host:portnul using srcip:srcport. Leave the partitioning
  #and reliability to reliable.repy
 def send_file(inputfile, host, portnum, srcip=None, srcport=None):
     # Open the file, read it, and send it into to reliable_sendmess
+    file = open(inputfile, 'r') #open & read file
+    sendmess(portnul, portnum, file) #?????portnul
     pass
 
 
@@ -20,3 +20,9 @@ if callfunc == 'initialize':
     print("Starting client process")
     # Arguments are accessed from the callargs array
     # Pass argument values to reliable_config(), then call send_file()
+    #check for ack somewhere in x time
+    #how do we get callargs from server??
+    for args in callargs :
+      reliable_config(args)
+
+    send_file()
