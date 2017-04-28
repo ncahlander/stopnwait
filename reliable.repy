@@ -1,1 +1,7 @@
-print("hello")
+#stop & wait using recvmess and sendmess
+# CLIENT reads a data file and sends the data to the computer running the server
+# packet size of data is defined by USER
+# when SERVER receives packet of data, sends acknowledgement to CLIENT
+# if the acknowledgement message isn't received within user defined amount of seconds,
+# message is resent x times until moving on to next data packet
+# output: received data in a file
