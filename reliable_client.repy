@@ -20,7 +20,12 @@ if callfunc == 'initialize':
     print("Starting client process")
     # Arguments are accessed from the callargs array
     # Pass argument values to reliable_config(), then call send_file()
+
+    #send initial frame
+
     #check for ack somewhere in x time
+    #10 seconds timeout
+    #if timeout, send frame again
     #how do we get callargs from server??
     for args in callargs :
       reliable_config(args)

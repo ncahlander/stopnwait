@@ -13,6 +13,8 @@ def message_received(remoteip, remoteport, message, commhandle):
     #file = ?
     #handle
     file.write(message) #idon'tknwohwthatimdoing
+
+    #received message, SEND ACK 
     pass
 
 def startServer(portnum):
