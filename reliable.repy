@@ -1,7 +1,22 @@
-#stop & wait using recvmess and sendmess
-# CLIENT reads a data file and sends the data to the computer running the server
-# packet size of data is defined by USER
-# when SERVER receives packet of data, sends acknowledgement to CLIENT
-# if the acknowledgement message isn't received within user defined amount of seconds,
-# message is resent x times until moving on to next data packet
-# output: received data in a file
+"""
+This library contains functions that may be used by both the server and 
+the client (they don't necessarily have to be used by both). 
+"""
+
+def reliable_sendmess(destip, destport, message, srcip=None, srcport=None):
+    pass
+    
+def reliable_recvmess(srcip, srcport, function):
+    pass
+
+def reliable_config(maxdgramsize, retries, timeoutinms):
+    mycontext['maxdgramsize'] = maxdgramsize
+    mycontext['retries'] = retries
+    mycontext['timeout'] = float(timeoutinms) / 1000
+    
+if callfunc == 'initialize':
+    # Any defaults or globals can be set here. 
+    # Global values should be put in the mycontext dictionary.
+    # For example, here is a lock you can use for protecting 
+    # values in threaded callbacks 
+    mycontext['lock'] = getlock()
